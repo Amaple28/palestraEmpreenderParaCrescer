@@ -98,16 +98,16 @@
                                                 aria-label="Close"></button>
                                         </div>
                                         <div class="modal-body">
-                                            Palestra Empreender Para Crescer
+                                            Palestra Empreender Para Crescer, Segundo os Princípios Bíblicos
                                             <br><br>
-                                            <b>Data:</b> 12/02/2022
+                                            <b>Data:</b> 19/02/2022
                                             <br>
-                                            <b>Horário:</b> 10:00 - 12:00
+                                            <b>Horário:</b> 09:30 - 12:00
                                             <br>
                                             <b>Endereço:</b> Rua Padre Eustáquio, 1984, Padre Eustáquio, Belo Horizonte
                                             - MG, 30720-100
                                             <br>
-                                            <b>Valor:</b> R$ 17,50
+                                            <b>Valor:</b> R$ 20,00
                                         </div>
                                     </div>
                                 </div>
@@ -134,17 +134,20 @@
     <section class="my full-screen d-lg-flex justify-content-center align-items-center" id="resume">
         <div class="container">
             <div class="row">
+                <h2 class="mb-4">Sobre mim</h2>
                 <div class="col-lg-5 col-md-12 col-12">
-                    <h2 class="mb-4">Sobre mim</h2>
                     <div class="about-image svg">
                         <img src="img/undraw/viviane.png" class="img-fluid" alt="svg image">
                     </div>
                 </div>
                 <div class="col-lg-6 col-12">
-                    <p class="pinicio"><br><br> Empreendedora já há quase sete anos auxiliando empreendedores no
+                    <p class="pinicio" style="text-align: center;"><br><br> Empreendedora já há quase sete anos
+                        auxiliando empreendedores no
                         planejamento
                         dos seus negócios atuando de maneira próxima aos clientes, gerando com isso, crescimento
                         contínuo e seguro aos empreendimentos. <br><br>
+                    </p>
+                    <p class="pinicio">
                         <b>
                             - Especialista em gestão estratégica de negócios<br>
                             - Bacharel em Administração<br>
@@ -268,40 +271,61 @@
                     <div class="contact-form">
                         <h2 class="mb-4">Interessado em participar? Faça a sua inscrição abaixo.</h2>
 
-                        <form class="needs-validation" method="post" name="form">
+                        <form class="needs-validation" novalidate id="my-form" action="https://formspree.io/f/xknyolka"
+                            method="POST" name="form">
                             <div class="row">
                                 <div class="col-12">
-                                    <input type="text" class="form-control" name="name" placeholder="Nome"
-                                        id="validationCustom01">
+                                    <input type="text" value="Landing Page da Palestra" name="Local de envio"
+                                        id="prodType" hidden>
+
+                                    <input type="text" class="form-control" name="Nome" placeholder="Nome*" id="name">
                                     <div class="invalid-feedback">
                                         Por favor, preencha o seu nome.
                                     </div>
                                 </div>
 
                                 <div class="col-12">
-                                    <input type="email" class="form-control" name="email" placeholder="E-mail"
-                                        id="validationCustom02">
+                                    <input type="email" class="form-control" name="E-mail" placeholder="E-mail*"
+                                        id="email">
                                     <div class="invalid-feedback">
                                         Por favor, preencha o seu e-mail.
                                     </div>
                                 </div>
 
                                 <div class="col-lg-6 col-12">
-                                    <input type="tel" class="form-control" name="celular" placeholder="Celular"
-                                        id="validationCustom03">
+                                    <input type="number" class="form-control" name="Celular" placeholder="Celular*"
+                                        id="cell">
                                     <div class="invalid-feedback">
                                         Por favor, preencha o seu celular.
                                     </div>
                                 </div>
 
                                 <div class="ml-lg-auto col-lg-5 col-12">
-                                    <a class="btn btn-primary btn-lg form-control submit-btn" id="liveAlertBtn"
-                                        target="_blank" type="submit"
-                                        href="https://www.sympla.com.br/empreender-para-crescer--segundo-os-principios-biblicos__1459893"
-                                        role="button">Inscrever-se</a>
+
                                 </div>
 
-                                <div id="liveAlertPlaceholder"></div>
+                                <div class="col-12">
+                                    <div class="form-check">
+                                        <input name="aceito" class="form-check-input" type="checkbox" value=""
+                                            id="invalidCheck" oninput="check()" required>
+                                        <label for="invalidCheck" class="form-check-label">
+                                            Aceito receber informações sobre a palestra através do e-mail informado
+                                            acima.
+                                        </label>
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        É necessário aceitar para prosseguir.
+                                    </div>
+                                </div>
+
+                                <div class="ml-lg-auto col-lg-5 col-12">
+                                    <button class="btn btn-primary btn-lg form-control submit-btn" onclick="loading()"
+                                        id="btn-submit" name="submit" type="submit" disabled> Inscrever-se</button>
+                                </div>
+
+
+
+                                <div id="my-form-status" class="col-12"></div>
                             </div>
                         </form>
                     </div>
@@ -310,8 +334,9 @@
                 <div class="col-lg-5 mr-lg-5 col-12">
                     <div class="google-map w-100">
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3751.2208776389316!2d-43.97335868563418!3d-19.915094942987643!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa6973ca1e805e3%3A0x2bdf8087e5fa0804!2sPn238903325!5e0!3m2!1spt-BR!2sbr!4v1641429638562!5m2!1spt-BR!2sbr"
-                            width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3751.2243359647314!2d-43.97340908551009!3d-19.91494914298338!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa6973ca2346807%3A0xf74482a0c2b0bf11!2sR.%20Padre%20Eust%C3%A1quio%2C%201984%20-%20Padre%20Eust%C3%A1quio%2C%20Belo%20Horizonte%20-%20MG%2C%2030720-100!5e0!3m2!1spt-BR!2sbr!4v1643127283642!5m2!1spt-BR!2sbr"
+                            width="400" height="300" frameborder="0" style="border:0" allowfullscreen
+                            loading="lazy"></iframe>
                     </div>
 
 
@@ -319,7 +344,7 @@
                     <div class="contact-info d-flex justify-content-between align-items-center py-4 px-lg-5">
                         <div class="contact-info-item">
                             <h3 class="mb-3 text-white">Viviane Nunes</h3>
-                            <p class="footer-text mb-0">12/02/2022</p>
+                            <p class="footer-text mb-0">19/02/2022</p>
                             <p><a
                                     href="https://api.whatsapp.com/send?phone=5531973260005&text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20a%20sua%20palestra%20do%20dia%2020%2F02.">Dúvidas?</a>
                             </p>
@@ -350,7 +375,7 @@
             <div class="row">
 
                 <div class="col-lg-12 col-12">
-                    <p class="copyright-text text-center">Copyright &copy; 2021 ISLU. Todos os Direitos Reservados</p>
+                    <p class="copyright-text text-center">Copyright &copy; 2022 ISLU. Todos os Direitos Reservados</p>
                     <p class="copyright-text text-center">Designer: <a rel="nofollow"
                             href="https://www.instagram.com/islu_webdesign/">Maisa Rodrigues</a></p>
                 </div>
@@ -370,28 +395,98 @@
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 
-
-    <!--FUNÇÃO BOTÃO INSCREVER-SE-->
+    <!--FUNÇÃO VALIDAÇÃO-->
     <script>
-        var alertPlaceholder = document.getElementById('liveAlertPlaceholder')
-        var alertTrigger = document.getElementById('liveAlertBtn')
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (function () {
+            'use strict'
 
-        function alert(message, type) {
-            var wrapper = document.createElement('div')
-            wrapper.innerHTML = '<div class="alert alert-' + type + ' alert-dismissible" role="alert">' + message + '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>'
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.querySelectorAll('.needs-validation')
 
-            alertPlaceholder.append(wrapper)
-        }
+            // Loop over them and prevent submission
+            Array.prototype.slice.call(forms)
+                .forEach(function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (!form.checkValidity()) {
+                            event.preventDefault()
+                            event.stopPropagation()
+                        }
 
-        if (alertTrigger) {
-            alertTrigger.addEventListener('click', function () {
-                alert('Obrigada por se inscrever! Em breve enviaremos mais informações sobre a palestra no seu e-mail.', 'success')
-            })
+                        form.classList.add('was-validated')
+                    }, false)
+                })
+        })()
+    </script>
+
+    <script>
+        function check() {
+
+            let checkbox = document.getElementById('invalidCheck')
+            let button = document.getElementById('btn-submit')
+
+            if (checkbox.checked) {
+                button.disabled = false;
+                console.log("O usuário marcou o checkbox");
+            } else {
+                button.disabled = true;
+                console.log("O usuário não marcou o checkbox");
+            }
         }
     </script>
 
+    <!--FUNÇÃO BOTÃO INSCREVER-SE-->
+    <script>
+        window.addEventListener("DOMContentLoaded", function () {
+
+            // get the form elements defined in your form HTML above
+
+            var form = document.getElementById("my-form");
+            var button = document.getElementById("btn-submit");
+            var status = document.getElementById("my-form-status");
+
+            // Success and Error functions for after the form is submitted
+
+            function success() {
+                form.reset();
+                button.style = "display: none ";
+                status.innerHTML = '<div class="alert alert-success" role="alert">Obrigada por se inscrever! Em breve enviaremos mais informações sobre a palestra no seu e-mail.</div>';
+                window.location.href = "https://pay.hotmart.com/S65679280H", "_blank";
+            }
+
+            function error() {
+                status.innerHTML = '<div class="alert alert-danger" role="alert">Houve um problema ao realizar a inscrição, tente novamente mais tarde.</div>';
+            }
+
+            // handle the form submission event
+
+            form.addEventListener("submit", function (ev) {
+                ev.preventDefault();
+                var data = new FormData(form);
+                ajax(form.method, form.action, data, success, error);
+            });
+        });
+
+        // helper function for sending an AJAX request
+
+        function ajax(method, url, data, success, error) {
+            var xhr = new XMLHttpRequest();
+            xhr.open(method, url);
+            xhr.setRequestHeader("Accept", "application/json");
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState !== XMLHttpRequest.DONE) return;
+                if (xhr.status === 200) {
+                    success(xhr.response, xhr.responseType);
+                } else {
+                    error(xhr.status, xhr.response, xhr.responseType);
+                }
+            };
+            xhr.send(data);
+        }
+    </script>
 </body>
 
 </html>
