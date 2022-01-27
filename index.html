@@ -266,72 +266,63 @@
     <section class="contact py-5" id="contact">
         <div class="container">
             <div class="row">
-
+                <h2 class="mb-4">Interessado em participar? Faça a sua inscrição abaixo.</h2>
                 <div class="col-lg-6 col-12">
                     <div class="contact-form">
-                        <h2 class="mb-4">Interessado em participar? Faça a sua inscrição abaixo.</h2>
-
-                        <form class="needs-validation" novalidate id="my-form" action="https://formspree.io/f/xknyolka"
-                            method="POST" name="form">
-                            <div class="row">
-                                <div class="col-12">
-                                    <input type="text" value="Landing Page da Palestra" name="Local de envio"
-                                        id="prodType" hidden>
-
-                                    <input type="text" class="form-control" name="Nome" placeholder="Nome*" id="name">
-                                    <div class="invalid-feedback">
-                                        Por favor, preencha o seu nome.
-                                    </div>
-                                </div>
-
-                                <div class="col-12">
-                                    <input type="email" class="form-control" name="E-mail" placeholder="E-mail*"
-                                        id="email">
-                                    <div class="invalid-feedback">
-                                        Por favor, preencha o seu e-mail.
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-6 col-12">
-                                    <input type="number" class="form-control" name="Celular" placeholder="Celular*"
-                                        id="cell">
-                                    <div class="invalid-feedback">
-                                        Por favor, preencha o seu celular.
-                                    </div>
-                                </div>
-
-                                <div class="ml-lg-auto col-lg-5 col-12">
-
-                                </div>
-
-                                <div class="col-12">
-                                    <div class="form-check">
-                                        <input name="aceito" class="form-check-input" type="checkbox" value=""
-                                            id="invalidCheck" oninput="check()" required>
-                                        <label for="invalidCheck" class="form-check-label">
-                                            Aceito receber informações sobre a palestra através do e-mail informado
-                                            acima.
-                                        </label>
-                                    </div>
-                                    <div class="invalid-feedback">
-                                        É necessário aceitar para prosseguir.
-                                    </div>
-                                </div>
-
-                                <div class="ml-lg-auto col-lg-5 col-12">
-                                    <button class="btn btn-primary btn-lg form-control submit-btn" onclick="loading()"
-                                        id="btn-submit" name="submit" type="submit" disabled> Inscrever-se</button>
-                                </div>
 
 
+                        <form class="row g-3 needs-validation" action="https://formspree.io/f/mqknpzqj" method="POST"
+                            id="my-form">
 
-                                <div id="my-form-status" class="col-12"></div>
+                            <div class="col-12">
+                                <input type="text" value="Landing Page da Palestra" name="Local de envio" id="prodType"
+                                    hidden>
+                                <label for="validationCustom01" class="form-label">Nome</label>
+                                <input type="text" name="Nome" class="form-control" id="validationCustom01" value="" required>
                             </div>
+
+                            <div class="col-12">
+                                <label for="validationCustomUsername" class="form-label">E-mail</label>
+                                <input type="email" name="E-mail" class="form-control" id="validationCustomUsername"
+                                    aria-describedby="inputGroupPrepend" required>
+                            </div>
+
+
+                            <div class="col-lg-6 col-12">
+                                <label for="validationCustom03" class="form-label">Celular</label>
+                                <input type="tel" name="Celular" class="form-control" id="validationCustom03" required>
+                            </div>
+
+
+                            <div class="col-12">
+                                <div class="form-check">
+                                    <input class="form-check-input" name="Termos" type="checkbox" value="" id="invalidCheck" required>
+                                    <label class="form-check-label" for="invalidCheck">
+                                        Aceito receber informações sobre a palestra através do e-mail informado acima.
+                                    </label>
+
+                                    <div class="invalid-feedback">
+                                        É necessário preencher todos os campos para prosseguir com a inscrição!
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="ml-lg-auto col-lg-5 col-12">
+                                <button class="btn custom-btn custom-btn-bg" type="submit" id="btn-submit">Inscrever-se</button>
+                            </div>
+
+                            <div class="col-12" id="my-form-status"></div>
+
                         </form>
+
                     </div>
                 </div>
 
+
                 <div class="col-lg-5 mr-lg-5 col-12">
+
+                    <br><br>
                     <div class="google-map w-100">
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3751.2243359647314!2d-43.97340908551009!3d-19.91494914298338!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa6973ca2346807%3A0xf74482a0c2b0bf11!2sR.%20Padre%20Eust%C3%A1quio%2C%201984%20-%20Padre%20Eust%C3%A1quio%2C%20Belo%20Horizonte%20-%20MG%2C%2030720-100!5e0!3m2!1spt-BR!2sbr!4v1643127283642!5m2!1spt-BR!2sbr"
@@ -394,11 +385,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-
-    <!--FUNÇÃO VALIDAÇÃO-->
     <script>
         // Example starter JavaScript for disabling form submissions if there are invalid fields
         (function () {
@@ -420,26 +407,7 @@
                     }, false)
                 })
         })()
-    </script>
 
-    <script>
-        function check() {
-
-            let checkbox = document.getElementById('invalidCheck')
-            let button = document.getElementById('btn-submit')
-
-            if (checkbox.checked) {
-                button.disabled = false;
-                console.log("O usuário marcou o checkbox");
-            } else {
-                button.disabled = true;
-                console.log("O usuário não marcou o checkbox");
-            }
-        }
-    </script>
-
-    <!--FUNÇÃO BOTÃO INSCREVER-SE-->
-    <script>
         window.addEventListener("DOMContentLoaded", function () {
 
             // get the form elements defined in your form HTML above
@@ -451,10 +419,9 @@
             // Success and Error functions for after the form is submitted
 
             function success() {
-                form.reset();
                 button.style = "display: none ";
                 status.innerHTML = '<div class="alert alert-success" role="alert">Obrigada por se inscrever! Em breve enviaremos mais informações sobre a palestra no seu e-mail.</div>';
-                window.location.href = "https://pay.hotmart.com/S65679280H", "_blank";
+                window.location.href = "https://pay.hotmart.com/S65679280H";
             }
 
             function error() {
@@ -470,8 +437,6 @@
             });
         });
 
-        // helper function for sending an AJAX request
-
         function ajax(method, url, data, success, error) {
             var xhr = new XMLHttpRequest();
             xhr.open(method, url);
@@ -486,7 +451,10 @@
             };
             xhr.send(data);
         }
+
     </script>
+
+
 </body>
 
 </html>
